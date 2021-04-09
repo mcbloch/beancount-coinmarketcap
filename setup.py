@@ -6,5 +6,5 @@ setup(
     description='Coinmarketcap price source for Beancount',
     packages=['price_sources'],
     license='MIT',
-    install_requires=['requests', 'beautifulsoup4'],
+    install_requires=['requests'],
 )
