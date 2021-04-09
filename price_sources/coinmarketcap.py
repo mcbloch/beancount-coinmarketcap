@@ -11,9 +11,9 @@ from beancount.prices import source
 from beancount.utils.date_utils import parse_date_liberally
 
 ZERO = timedelta(0)
-BASE_URL_TEMPLATE_WITHOUT_TIME = Template("https://web-api.coinmarketcap.com/v1/cryptocurrency/ohlcv/historical?convert=USD&slug=$ticker")
-BASE_URL_TEMPLATE_WITH_TIME = Template("https://web-api.coinmarketcap.com/v1/cryptocurrency/ohlcv/historical?convert=USD&slug=$ticker&time_end=$time_end&time_start=$time_start")
-CURRENCY = "USD"
+CURRENCY = "EUR"
+BASE_URL_TEMPLATE_WITHOUT_TIME = Template(f"https://web-api.coinmarketcap.com/v1/cryptocurrency/ohlcv/historical?convert={CURRENCY}&slug=$ticker")
+BASE_URL_TEMPLATE_WITH_TIME = Template(f"https://web-api.coinmarketcap.com/v1/cryptocurrency/ohlcv/historical?convert={CURRENCY}&slug=$ticker&time_end=$time_end&time_start=$time_start")
 TIME_DELAY = 15
 
 class UTCtzinfo(tzinfo):
